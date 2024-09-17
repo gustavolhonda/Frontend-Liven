@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
+import { Link } from 'react-router-dom';
 
 function TranscriptionList() {
   const [transcriptions, setTranscriptions] = useState([]);
@@ -69,6 +70,8 @@ function TranscriptionList() {
           ))}
         </tbody>
       </table>
+      <br />
+      <Link to="/">Voltar</Link>
     </div>
   );
 }

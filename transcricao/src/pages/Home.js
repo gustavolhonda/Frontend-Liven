@@ -18,7 +18,8 @@ function Home() {
         <ul>
           <li><Link to="/transcriptions/new">Nova Transcrição</Link></li>
           <li><Link to="/transcriptions">Minhas Transcrições</Link></li>
-          <li><LogoutButton /></li>
+          <br/>
+          <LogoutButton />
         </ul>
       </nav>
     </div>

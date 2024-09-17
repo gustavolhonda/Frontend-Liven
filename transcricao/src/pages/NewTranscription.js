@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import api from '../services/api';
+import { Link } from 'react-router-dom';
 
 function NewTranscription() {
   const [file, setFile] = useState(null);
@@ -46,6 +47,8 @@ function NewTranscription() {
         <br /><br />
         <button type="submit">Enviar</button>
       </form>
+      <br />
+      <Link to="/">Voltar</Link>
     </div>
   );
 }
