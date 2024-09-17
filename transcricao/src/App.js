@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import ResetPassword from './pages/ResetPassword';
+import NewTranscription from './pages/NewTranscription';
+import TranscriptionList from './pages/TranscriptionsList';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/transcriptions/new" element={<ProtectedRoute element={<NewTranscription />} />} />
+          <Route path="/transcriptions" element={<ProtectedRoute element={<TranscriptionList />} />} />
         </Routes>
       </Router>
     </AuthProvider>
