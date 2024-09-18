@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import api from '../services/api';
+import api from '../../services/api';
 import { Link } from 'react-router-dom';
+import HomeButton from '../../components/HomeButton/HomeButton';
+import './TranscriptionsList.css';
 
 function TranscriptionList() {
   const [transcriptions, setTranscriptions] = useState([]);
@@ -41,10 +43,12 @@ function TranscriptionList() {
   };
 
   return (
-    <div>
+    <div className="transcription-list-container">
       <h2>Minhas Transcrições</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <table>
+      <HomeButton />
+      <br />
+      {error && <p className="error">{error}</p>}
+      <table className="transcription-table">
         <thead>
           <tr>
             <th>ID</th>
@@ -63,15 +67,15 @@ function TranscriptionList() {
               <td>{new Date(t.createdAt).toLocaleString()}</td>
               <td>
                 {t.status === 'completed' && (
-                  <button onClick={() => handleDownload(t.id)}>Baixar</button>
+                  <button onClick={() => handleDownload(t.id)} className="download-button">
+                    Baixar
+                  </button>
                 )}
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      <br />
-      <Link to="/">Voltar</Link>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import api from '../services/api';
+import api from '../../services/api';
+import './ResetPassword.css';
 
 function ResetPassword() {
   const [email, setEmail] = useState('');
@@ -19,20 +20,21 @@ function ResetPassword() {
   };
 
   return (
-    <form onSubmit={handleReset}>
-      <h2>Esqueci minha senha</h2>
-      {message && <p style={{ color: 'green' }}>{message}</p>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      /><br/>
-      <br/>
-      <button type="submit">Resetar Senha</button>
-    </form>
+    <div className="reset-password-container">  
+        <h2>Redefinir Senha</h2>
+        {error && <p className="error">{error}</p>}
+        {message && <p className="success">{message}</p>}
+        <form onSubmit={handleReset}>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <button type="submit">Resetar Senha</button>
+      </form>
+    </div>  
   );
 }
 

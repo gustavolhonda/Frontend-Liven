@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import api from '../services/api';
+import api from '../../services/api';
 import { Link } from 'react-router-dom';
+import './NewTranscription.css';
 
 function NewTranscription() {
   const [file, setFile] = useState(null);
@@ -38,10 +39,10 @@ function NewTranscription() {
   };
 
   return (
-    <div>
+    <div className='new-transcription-container'>
       <h2>Nova Transcrição</h2>
       {message && <p style={{ color: 'green' }}>{message}</p>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <input type="file" accept=".mp4" onChange={handleFileChange} />
         <br /><br />

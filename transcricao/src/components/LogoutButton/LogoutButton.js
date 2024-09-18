@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import api from '../services/api';
-import { AuthContext } from '../context/AuthContext';
+import api from '../../services/api';
+import { AuthContext } from '../../context/AuthContext';
+import './LogoutButton.css';
 
 function LogoutButton() {
   const navigate = useNavigate();
@@ -18,7 +19,11 @@ function LogoutButton() {
     }
   };
 
-  return <button onClick={handleLogout}>Logout</button>;
+  return (
+    <button onClick={handleLogout} className="logout-button">
+      Logout
+    </button>
+  );
 }
 
 export default LogoutButton;

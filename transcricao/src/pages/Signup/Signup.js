@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import api from '../services/api';
+import api from '../../services/api';
 import { useNavigate } from 'react-router-dom';
+import './Signup.css';
 
 function Signup() {
   const [email, setEmail] = useState('');
@@ -20,27 +21,27 @@ function Signup() {
   };
 
   return (
-    <form onSubmit={handleSignup}>
+    <div className="signup-container">
       <h2>Cadastro</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      /><br/>
-      <br/>
-      <input
-        type="password"
-        placeholder="Senha"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      /><br/>
-      <br/>
-      <button type="submit">Registrar</button>
-    </form>
+      {error && <p className="error">{error}</p>}
+      <form onSubmit={handleSignup}>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Senha"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit">Registrar</button>
+      </form>
+    </div>
   );
 }
 

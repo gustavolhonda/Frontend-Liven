@@ -1,0 +1,46 @@
+.transcription-list-container {
+  padding: 20px;
+}
+
+.transcription-list-container h2 {
+  margin-bottom: 20px;
+}
+
+.transcription-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transcription-table th, .transcription-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.transcription-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.transcription-table th {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.download-button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}

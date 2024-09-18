@@ -1,8 +1,9 @@
 // src/pages/Home.js
 import React, { useContext } from 'react';
-import LogoutButton from '../components/LogoutButton';
-import { AuthContext } from '../context/AuthContext';
+import LogoutButton from '../../components/LogoutButton/LogoutButton';
+import { AuthContext } from '../../context/AuthContext';
 import { Link } from 'react-router-dom';
+import './Home.css';
 
 function Home() {
   const { user } = useContext(AuthContext);
@@ -12,7 +13,7 @@ function Home() {
   }
 
   return (
-    <div>
+    <div className="home-container">
       <h1>Bem-vindo ao Serviço de Transcrição</h1>
       <nav>
         <ul>
