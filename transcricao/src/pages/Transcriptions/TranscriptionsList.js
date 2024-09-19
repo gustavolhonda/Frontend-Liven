@@ -45,7 +45,6 @@ function TranscriptionList() {
   return (
     <div className="transcription-list-container">
       <h2>Minhas Transcrições</h2>
-      <HomeButton />
       <br />
       {error && <p className="error">{error}</p>}
       <table className="transcription-table">

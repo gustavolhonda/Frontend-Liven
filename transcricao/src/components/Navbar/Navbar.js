@@ -11,8 +11,6 @@ function Navbar() {
         <HomeButton />
       </div>
       <div className="navbar-right">
-        <Link to="/transcriptions/new">Nova Transcrição</Link>
-        <Link to="/transcriptions">Minhas Transcrições</Link>
         <LogoutButton />
       </div>
     </nav>

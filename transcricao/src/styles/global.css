@@ -19,5 +19,26 @@ button {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--primary-color);
+  position: relative;
+}
+
+a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+a:hover::after {
+  width: 40%;
+}
+
+a:hover {
+  color: var(--primary-color);
 }
