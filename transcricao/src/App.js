@@ -10,6 +10,7 @@ import ResetPassword from './pages/ResetPassword/ResetPassword';
 import NewTranscription from './pages/Transcriptions/NewTranscription';
 import TranscriptionList from './pages/Transcriptions/TranscriptionsList';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 import './styles/global.css';
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/transcriptions/new" element={<ProtectedRoute element={<NewTranscription />} />} />
           <Route path="/transcriptions" element={<ProtectedRoute element={<TranscriptionList />} />} />
         </Routes>
+        <Footer />
       </Router>
     </AuthProvider>
   );

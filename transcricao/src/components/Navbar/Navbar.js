@@ -10,6 +10,7 @@ function Navbar() {
       <div className="navbar-left">
         <HomeButton />
       </div>
+      <h2>TranscriMais</h2>
       <div className="navbar-right">
         <LogoutButton />
       </div>

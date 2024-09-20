@@ -6,6 +6,10 @@
   padding: 10px 20px;
 }
 
+.navbar h2 {
+  color: var(--secondary-color);
+}
+
 .navbar a {
   margin: 0 10px;
   color: var(--secondary-color);
