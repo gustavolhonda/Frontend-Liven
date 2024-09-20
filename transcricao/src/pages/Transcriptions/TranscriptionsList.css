@@ -3,6 +3,8 @@
 }
 
 .transcription-list-container h2 {
+  font-size: 28px;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 

@@ -1,46 +1,53 @@
-/* src/pages/transcriptions/NewTranscription.css */
 
 .new-transcription-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: var(--background-color); /* Caixinha cinza */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .new-transcription-container h2 {
-  font-size: 28px;
   color: var(--primary-color);
   margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .new-transcription-container form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 400px;
 }
 
 .new-transcription-container input[type="file"] {
   margin-bottom: 20px;
   padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   font-size: 16px;
 }
 
 .new-transcription-container button {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .new-transcription-container button:hover {
   background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.new-transcription-container button:active {
+  transform: translateY(0);
 }
 
 .new-transcription-container .error {
