@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
+import DailyLimit from '../../components/DailyLimit/DailyLimit';
 
 function Home() {
   const navigate = useNavigate();
@@ -25,6 +26,7 @@ function Home() {
     <div className="home-container">
       <h2>Bem-vindo ao Sistema de Transcrições</h2>
       <p>Aqui você pode criar e gerenciar suas transcrições de forma fácil e rápida.</p>
+      <DailyLimit />
       <div className="home-buttons">
         <button onClick={handleNewTranscription} className="home-action-button">
           Nova Transcrição
